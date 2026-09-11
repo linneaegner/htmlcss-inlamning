@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    /* Stilar för skärmar större än 768px. */
+    .gridcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    header {
+        background-color: var(--color-yellow);
+    }
+    .nav-list {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+    .nav-toggle {
+        display: none;
+    }
+
+    main {
+        background-color: var(--color-orange);
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+

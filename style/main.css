@@ -1,0 +1,231 @@
+/* Alla stilar för hela sidan. Mobile first */
+
+/* --------------------------  Reset and base styles -------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+blockquote {
+    margin: 0;
+}
+
+/*This img resets the width of the image to 100% and makes it a block element, which is usrful for responsive design.
+What happens if you remove the max-width 100% is that the image will stretch to the width of its container.
+for example if you have a container with a width of 500px, and the image is 1000px wide, the image will stretch to 500px 
+*/
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* --------------------------  Variables -------------------------- */
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-white-transparent: rgba(255, 255, 255, 0.261);
+    --color-grey-light-background: #f5f5f5;
+    --color-grey-dark-background: #333;
+    --color-grey-text-background: #bbbbbb;
+    --color-grey-shadow-1: #2b2b2b80;
+
+
+    /* Test colors for good layouts and practice with css grid and flexbox. */
+    --color-pink: #de667a;
+    --color-blue: #7c7ce0;
+    --color-green: #7fd77f;
+    --color-yellow: #e0e07c;
+    --color-orange: #e0a07c;
+    --color-red: #e07c7c;
+    --color-brown: #a07c7c;
+    --color-purple: #c279c2;
+}
+
+/* --------------------------  Body styles -------------------------- */
+body {
+    background-color: var(--color-grey-light-background);
+    color: var(--color-black);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --------------------------  Header styles -------------------------- */
+
+header{
+    background-image: url(../assets/bg/negative-space-black-forest-dawn.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header a {
+    color: var(--color-white);
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 12px;
+    filter: invert(1);
+}
+
+.nav-toggle-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-container {
+    background-color: var(--color-white-transparent);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+}
+
+.nav-list {
+    display: none
+}
+
+.header-content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-content>h1,
+.header-content>p {
+    color: var(--color-white);
+    text-align: center;
+}
+
+.header-content>h1 {
+    font-size: 1.8rem;
+}
+
+.header-content>p {
+    max-width: 280px;
+    font-size: 1.4rem;
+}
+
+/* --------------------------  Main styles -------------------------- */
+main {
+    padding: 20px;
+}
+
+#Om > h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#Om  h3{
+    font-weight: 500;
+}
+
+.gridcontainer {
+    /*margin: 0 auto;*/
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.griditem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.griditem>img {
+    border-radius: 50%;
+    box-shadow: 0 0 40px 10px var(--color-grey-shadow-1);
+    max-width: 60%;
+}
+
+.citat {
+    align-self: stretch;
+    background-color: var(--color-grey-text-background);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.citat-tecken {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: -24px;
+    margin-right: 12px;
+}
+
+
+
+/* --------------------------  Footer styles -------------------------- */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 60px 0px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: max-content;
+    margin: 0 auto;
+}
+.footer-address, .footer-contact, .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.4em;
+    filter: invert(1); /* gör svart SVG vit */
+  }
+
+.instagram {
+    background-image: url(../assets/icons/instagram.svg);  
+}
+
+.twitter {
+    background-image: url(../assets/icons/x.svg);
+}
+
+.facebook {
+    background-image: url(../assets/icons/facebook.svg);
+}
