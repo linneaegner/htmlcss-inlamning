@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -21,10 +25,6 @@ blockquote {
     margin: 0;
 }
 
-/*This img resets the width of the image to 100% and makes it a block element, which is usrful for responsive design.
-What happens if you remove the max-width 100% is that the image will stretch to the width of its container.
-for example if you have a container with a width of 500px, and the image is 1000px wide, the image will stretch to 500px 
-*/
 img {
     max-width: 100%;
     display: block;
@@ -53,7 +53,7 @@ button {
 :root {
     --color-black: #000;
     --color-white: #fff;
-    --color-white-transparent: rgba(255, 255, 255, 0.261);
+    --color-white-transparent: rgba(255, 255, 255, 0.064);
     --color-grey-light-background: #f5f5f5;
     --color-grey-dark-background: #333;
     --color-grey-text-background: #bbbbbb;
@@ -89,6 +89,11 @@ header{
     background-size: cover;
     background-position: center;
     position: relative; 
+    min-height: 100vh;
+}
+
+header a {
+    color: var(--color-white);
 }
 
 
@@ -116,6 +121,10 @@ header{
     width: 100%;
     justify-content: end;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .nav-list {
@@ -123,12 +132,12 @@ header{
 }
 
 .header-content {
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    min-height: 100vh;
 }
 
 .header-content>h1,
@@ -145,6 +154,8 @@ header{
     max-width: 280px;
     font-size: 1.4rem;
 }
+   
+/* -----  Scroll arrow to Om (gör så att den scrollar i en fin transition) ----- */
 #scroll-to-om-arrow {
     width: var(--icon-size);
     height: var(--icon-size);
@@ -155,25 +166,30 @@ header{
     filter: invert(1);
 }
 
+
 /* --------------------------  Main styles -------------------------- */
 main {
-    padding: 80px 20px;
+    padding: 0 20px 20px;
     position: relative;
 }
 
-#Om > h2{
+#Om {
+    padding-top: 20px;
+    margin-bottom: 60px;
+}
+
+#Om  h2{
     text-align: center;
+    font-size: 1.8rem;
     margin-bottom: 40px;
 }
 
 #Om  h3{
-    font-weight: 500;
+    font-size: 1rem;
 }
 
 .gridcontainer {
-    /*margin: 0 auto;*/
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     gap: 40px;
 }
 
@@ -188,7 +204,9 @@ main {
 .griditem>img {
     border-radius: 50%;
     box-shadow: 0 0 40px 10px var(--color-grey-shadow-1);
-    max-width: 60%;
+    width: 60%;
+    max-width: 320px;
+    min-width: 200px;
 }
 
 .citat {
@@ -196,6 +214,8 @@ main {
     background-color: var(--color-grey-text-background);
     border-radius: 8px;
     padding: 40px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .citat-tecken {
@@ -206,6 +226,7 @@ main {
     margin-right: 12px;
 }
 
+/* -----  Scroll arrow to footer (gör även här så att den scrollar i en fin transition) ----- */
 #scroll-to-footer-arrow {
     width: var(--icon-size);
     height: var(--icon-size);
@@ -220,6 +241,9 @@ footer {
     background-color: var(--color-black);
     color: var(--color-white);
     padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-content {
@@ -227,7 +251,6 @@ footer {
     flex-direction: column;
     gap: 40px;
     width: max-content;
-    margin: 0 auto;
 }
 .footer-address, .footer-contact, .footer-social {
     display: flex;
