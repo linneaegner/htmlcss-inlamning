@@ -26,7 +26,7 @@
     }
 
     .om-lagmedlem {
-        max-width: 420px
+        max-width: 420px;
     }
 
     footer {
@@ -37,7 +37,7 @@
         flex-direction: row;
         font-size: 1.2rem;
         justify-content: space-evenly;
-        width: 100%; /* VAd ska jag ha för bredd för att kunna använda space-evenly. Kanske borde jag ändra grundinställningen med margin 0 auto och width max content i main.css till något annat? */
+        width: 100%; 
     }
 }
 
