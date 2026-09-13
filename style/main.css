@@ -80,10 +80,6 @@ header{
     background-size: cover;
     background-position: center;
     position: relative; 
-    min-height: 100vh;
-}
-
-header a {
     color: var(--color-white);
 }
 
@@ -134,7 +130,6 @@ header a {
 
 .header-content>h1,
 .header-content>p {
-    color: var(--color-white);
     text-align: center;
 }
 
@@ -190,7 +185,6 @@ main {
 .griditem {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -244,7 +238,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: max-content;
 }
 .footer-address, .footer-contact, .footer-social {
     display: flex;
