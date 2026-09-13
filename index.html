@@ -6,73 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/mq.css">
-    <title>Assignment html & css</title>
+    <title>Tegel Consulting - Welcome to nature</title>
+    <meta name="description" content="Tegel Consulting är en konsultfirma som hjälper din verksamhet med det mesta.">
 </head>
 
 <body>
     <header>
         <nav class="nav-container">
-            <button class="nav-toggle">
-                <img src="assets/icons/hamburger.png" alt="Hamburger menu icon" class="nav-toggle-icon">
+            <button type="button" class="nav-toggle" aria-label="Öppna meny">
+                <img src="assets/icons/hamburger.png" alt="" class="nav-toggle-icon">
             </button>
             <ul class="nav-list">
-                <li><a href="#">Hem</a></li> <!-- Lägg till navigation här senare -->
-                <li><a href="#Om">Om</a></li>
-                <li><a href="#Kontakt">Kontakt</a></li>
+                <li><a href="#">Hem</a></li> 
+                <li><a href="#om">Om</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
         <div class="header-content">
             <h1>Welcome to nature</h1>
             <p>A journey throught time and sheep</p>
             <p>To see how ...cotton ... is mage, made I mean...</p>
-            <a id="scroll-to-om-arrow" href="#Om">
-                <img src="assets/icons/down-arrow.png" alt="Scrolla ner till Om">
+            <a id="scroll-to-om-arrow" href="#om">
+                <img src="assets/icons/down-arrow.png" alt="Snabbspola till sektionen Träffa laget">
             </a>
         </div>
     </header>
     <main>
-        <section id="Om">
+        <section id="om">
             <h2>Träffa laget</h2>
             <div class="gridcontainer">
-                <div class="griditem">
+                <article class="griditem">
                     <h3>Rakib</h3>
-                    <img src="assets/profiles/Rakib_Square.png" alt="Picture of Rakib">
-                    <blockquote class="citat">
-                        <p><span class="citat-tecken" aria-hidden="true">&rdquo;</span>Rakib är vår vassaste
-                            node-utvecklare och håller ständigt ett öga på nya tekniker</p>
-                    </blockquote>
-                </div>
-                <div class="griditem">
+                    <img src="assets/profiles/Rakib_Square.png" alt="Foto av Rakib">
+                    <p class="om-lagmedlem">
+                        <span class="citat-tecken" aria-hidden="true">&rdquo;</span>Rakib är vår vassaste
+                            node-utvecklare och håller ständigt ett öga på nya tekniker
+                    </p>
+                </article>
+                <article class="griditem">
                     <h3>Alexandra</h3>
-                    <img src="assets/profiles/Alexandra_Square.png" alt="Picture of Alexandra">
-                    <blockquote class="citat">
-                        <p><span class="citat-tecken" aria-hidden="true">&rdquo;</span>Alexandra håller reda på alla
-                            överallt och ser till att det flyter</p>
-                    </blockquote>
-                </div>
-                <div class="griditem">
+                    <img src="assets/profiles/Alexandra_Square.png" alt="Foto av Alexandra">
+                    <p class="om-lagmedlem">
+                        <span class="citat-tecken" aria-hidden="true">&rdquo;</span>Alexandra håller reda på alla
+                            överallt och ser till att det flyter
+                    </p>
+                </article>
+                <article class="griditem">
                     <h3>Lasse</h3>
-                    <img src="assets/profiles/NoPerson_Square.png" alt="Picure missing">
-                    <blockquote class="citat">
-                        <p><span class="citat-tecken" aria-hidden="true">&rdquo;</span>Gör övriga saker... mestadels ...
-                        </p>
-                    </blockquote>
-                </div>
-                <div class="griditem">
+                    <img src="assets/profiles/NoPerson_Square.png" alt="Foto av Lasse saknas">
+                    <p class="om-lagmedlem">
+                        <span class="citat-tecken" aria-hidden="true">&rdquo;</span>Gör övriga saker... mestadels ...
+                    </p>
+                </article>
+                <article class="griditem">
                     <h3>Sebastian</h3>
-                    <img src="assets/profiles/Sebastian_Square.png" alt="Picture of Sebastian">
-                    <blockquote class="citat">
-                        <p><span class="citat-tecken" aria-hidden="true">&rdquo;</span>En av våra utbildare som har stor
+                    <img src="assets/profiles/Sebastian_Square.png" alt="Foto av Sebastian">
+                    <p class="om-lagmedlem">
+                        <span class="citat-tecken" aria-hidden="true">&rdquo;</span>En av våra utbildare som har stor
                             erfarenhet av ganska många saker</p>
-                    </blockquote>
-                </div>
+                </article>
             </div>
         </section>
-        <a id="scroll-to-footer-arrow" href="#Kontakt">
-            <img src="assets/icons/down-arrow.png" alt="Scrolla ner till Kontakt">
+        <a id="scroll-to-footer-arrow" href="#kontakt">
+            <img src="assets/icons/down-arrow.png" alt="Snabbspola till sektionen kontakt">
         </a>
     </main>
-    <footer id="Kontakt">
+    <footer id="kontakt">
         <div class="footer-content">
             <address class="footer-address">
                 <p>Tegel consulting AB</p>

@@ -25,11 +25,13 @@
         display: none;
     }
 
-    .citat p {
+    .om-lagmedlem {
         max-width: 420px
     }
 
-
+    footer {
+        padding: 60px 40px;
+    }
     
     .footer-content {
         flex-direction: row;

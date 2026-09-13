@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
 body,
 h1,
 h2,
@@ -55,20 +59,8 @@ button {
     --color-white: #fff;
     --color-white-transparent: rgba(255, 255, 255, 0.064);
     --color-grey-light-background: #f5f5f5;
-    --color-grey-dark-background: #333;
     --color-grey-text-background: #bbbbbb;
     --color-grey-shadow-1: #2b2b2b80;
-
-
-    /* Test colors for good layouts and practice with css grid and flexbox. */
-    --color-pink: #de667a;
-    --color-blue: #7c7ce0;
-    --color-green: #7fd77f;
-    --color-yellow: #e0e07c;
-    --color-orange: #e0a07c;
-    --color-red: #e07c7c;
-    --color-brown: #a07c7c;
-    --color-purple: #c279c2;
 
     /* Storlek på ikoner */
     --icon-size: 32px;
@@ -125,6 +117,7 @@ header a {
     top: 0;
     right: 0;
     z-index: 10;
+    padding: 0 12px;
 }
 
 .nav-list {
@@ -169,22 +162,23 @@ header a {
 
 /* --------------------------  Main styles -------------------------- */
 main {
-    padding: 0 20px 20px;
+    padding: 0 0 80px;
     position: relative;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
-#Om {
+#om {
     padding-top: 20px;
-    margin-bottom: 60px;
 }
 
-#Om  h2{
+#om  h2{
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 40px;
 }
 
-#Om  h3{
+#om  h3{
     font-size: 1rem;
 }
 
@@ -209,7 +203,7 @@ main {
     min-width: 200px;
 }
 
-.citat {
+.om-lagmedlem {
     align-self: stretch;
     background-color: var(--color-grey-text-background);
     border-radius: 8px;
@@ -240,7 +234,7 @@ main {
 footer {
     background-color: var(--color-black);
     color: var(--color-white);
-    padding: 60px 0px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
