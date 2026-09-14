@@ -70,7 +70,7 @@ body {
     background-color: var(--color-grey-light-background);
     color: var(--color-black);
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* --------------------------  Header styles -------------------------- */
@@ -212,7 +212,7 @@ main {
     font-weight: bold;
     line-height: 0;
     vertical-align: -24px;
-    margin-right: 12px;
+    margin-right: 4px;
 }
 
 /* -----  Scroll arrow to footer (gör även här så att den scrollar i en fin transition) ----- */
