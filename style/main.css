@@ -12,8 +12,10 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
+    html {
+        scroll-behavior: auto;
+    }
+}
 
 body,
 h1,
@@ -65,27 +67,53 @@ button {
     --icon-size: 32px;
 }
 
-/* --------------------------  Body styles -------------------------- */
+/* --------------------------  Body styles  och typografi  -------------------------- */
 body {
     background-color: var(--color-grey-light-background);
     color: var(--color-black);
     font-size: 1rem;
     line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 0.9rem + 2.2vw, 2.1rem);
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font-size: 0.875rem;
+    letter-spacing: 0.25px;
+}
+
 
 /* --------------------------  Header styles -------------------------- */
 
-header{
+header {
     background-image: url(../assets/bg/negative-space-black-forest-dawn.jpg);
     background-size: cover;
     background-position: center;
-    position: relative; 
+    position: relative;
     color: var(--color-white);
 }
 
 
 .nav-toggle {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -103,19 +131,17 @@ header{
 
 .nav-container {
     background-color: var(--color-white-transparent);
-    height: 60px;
+    height: 3.75rem;
     display: flex;
     width: 100%;
     justify-content: end;
     align-items: center;
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 12px;
+    padding: 0 0.75rem;
 }
 
 .nav-list {
-    display: none
+    display: none;
 }
 
 .header-content {
@@ -123,31 +149,24 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding-top: 60px;
+    gap: 2.5rem;
+    padding-top: 3.75rem;
     min-height: 100vh;
-}
-
-.header-content>h1,
-.header-content>p {
-    text-align: center;
-}
-
-.header-content>h1 {
-    font-size: 1.8rem;
+    min-height: 100dvh; /* ignoreras av äldre webbläsare */
 }
 
 .header-content>p {
     max-width: 280px;
-    font-size: 1.4rem;
+    font-size: clamp(1.4rem, 1rem + 1.5vw, 1.8rem);
+    text-align: center;
 }
-   
+
 /* -----  Scroll arrow to Om (gör så att den scrollar i en fin transition) ----- */
 #scroll-to-om-arrow {
     width: var(--icon-size);
     height: var(--icon-size);
     position: absolute;
-    bottom:40px;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     filter: invert(1);
@@ -156,7 +175,7 @@ header{
 
 /* --------------------------  Main styles -------------------------- */
 main {
-    padding: 0 0 80px;
+    padding: 0 0 5rem;
     position: relative;
     margin: 0 auto;
     width: 90%;
@@ -164,30 +183,19 @@ main {
 }
 
 #om {
-    padding-top: 40px;
-}
-
-#om  h2{
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-}
-
-#om  h3{
-    font-size: 0.8rem;
-    letter-spacing: 0.25px;
+    padding-top: 2.5rem;
 }
 
 .gridcontainer {
     display: grid;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .griditem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .griditem>img {
@@ -202,17 +210,17 @@ main {
     align-self: stretch;
     background-color: var(--color-grey-text-background);
     border-radius: 8px;
-    padding: 40px;
+    padding: 2.5rem;
     max-width: 90%;
     margin: 0 auto;
 }
 
 .citat-tecken {
     font-size: 4rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 0;
-    vertical-align: -24px;
-    margin-right: 4px;
+    vertical-align: -1.5rem;
+    margin-right: 0.25rem;
 }
 
 /* -----  Scroll arrow to footer (gör även här så att den scrollar i en fin transition) ----- */
@@ -220,7 +228,7 @@ main {
     width: var(--icon-size);
     height: var(--icon-size);
     position: absolute;
-    bottom: 40px;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -229,7 +237,7 @@ main {
 footer {
     background-color: var(--color-black);
     color: var(--color-white);
-    padding: 60px 20px;
+    padding: 3.75rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,24 +246,31 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
-.footer-address, .footer-contact, .footer-social {
+
+.footer-address,
+.footer-contact,
+.footer-social {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
 }
+
 .icon {
     display: inline-block;
     width: 1.2em;
     height: 1.2em;
     vertical-align: middle;
     margin-right: 0.4em;
-    filter: invert(1); 
-  }
+    filter: invert(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
 
 .instagram {
-    background-image: url(../assets/icons/instagram.svg);  
+    background-image: url(../assets/icons/instagram.svg);
 }
 
 .twitter {

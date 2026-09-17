@@ -18,8 +18,8 @@
 
     .nav-list {
         display: flex;
-        gap:40px;
-        padding: 20px 40px;
+        gap:2.5rem;
+        padding: 1.25rem 2.5rem;
     }
     .nav-toggle {
         display: none;
@@ -30,8 +30,8 @@
     }
 
     footer {
-        padding: 60px 40px;
-    }
+        padding-inline: 2.5rem;
+      }
     
     .footer-content {
         flex-direction: row;
