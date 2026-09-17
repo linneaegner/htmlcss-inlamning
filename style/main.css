@@ -86,17 +86,21 @@ h3 {
 h1, h2 {
     text-align: center;
 }
+
 h1 {
-    font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem);
+    font-size: 1.8rem; 
+    /* font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem); */
 }
 
 h2 {
-    font-size: clamp(1.5rem, 0.9rem + 2.2vw, 2.1rem);
+    font-size: 1.5rem;
+    /* font-size: clamp(1.5rem, 0.9rem + 2.2vw, 2.1rem); */
     margin-bottom: 2.5rem;
 }
 
 h3 {
     font-size: 0.875rem;
+    /* font-size: clamp(0.875rem, 0.5rem + 1.25vw, 1rem); */
     letter-spacing: 0.25px;
 }
 
@@ -155,9 +159,9 @@ header {
     min-height: 100dvh; /* ignoreras av äldre webbläsare */
 }
 
-.header-content>p {
+.header-content > p {
     max-width: 280px;
-    font-size: clamp(1.4rem, 1rem + 1.5vw, 1.8rem);
+    font-size: 1.25rem;
     text-align: center;
 }
 
