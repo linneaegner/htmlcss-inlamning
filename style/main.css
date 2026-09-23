@@ -1,6 +1,3 @@
-/* Alla stilar för hela sidan. Mobile first */
-
-/* --------------------------  Reset and base styles -------------------------- */
 *,
 *::before,
 *::after {
@@ -11,19 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
 body,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 ul,
 li {
@@ -53,7 +41,6 @@ button {
     padding: 0;
 }
 
-/* --------------------------  Variables -------------------------- */
 
 :root {
     --color-black: #000;
@@ -62,12 +49,9 @@ button {
     --color-grey-light-background: #f5f5f5;
     --color-grey-text-background: #bbbbbb;
     --color-grey-shadow-1: #2b2b2b80;
-
-    /* Storlek på ikoner */
     --icon-size: 32px;
 }
 
-/* --------------------------  Body styles  och typografi  -------------------------- */
 body {
     background-color: var(--color-grey-light-background);
     color: var(--color-black);
@@ -83,29 +67,25 @@ h3 {
     font-weight: 700;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
 h1 {
-    font-size: 1.8rem; 
-    /* font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem); */
+    font-size: 1.8rem;
 }
 
 h2 {
     font-size: 1.5rem;
-    /* font-size: clamp(1.5rem, 0.9rem + 2.2vw, 2.1rem); */
     margin-bottom: 2.5rem;
 }
 
 h3 {
     font-size: 0.875rem;
-    /* font-size: clamp(0.875rem, 0.5rem + 1.25vw, 1rem); */
     letter-spacing: 0.25px;
 }
 
-
-/* --------------------------  Header styles -------------------------- */
 
 header {
     background-image: url(../assets/bg/negative-space-black-forest-dawn.jpg);
@@ -156,16 +136,14 @@ header {
     gap: 2.5rem;
     padding-top: 3.75rem;
     min-height: 100vh;
-    min-height: 100dvh; /* ignoreras av äldre webbläsare */
 }
 
-.header-content > p {
+.header-content>p {
     max-width: 280px;
     font-size: 1.25rem;
     text-align: center;
 }
 
-/* -----  Scroll arrow to Om (gör så att den scrollar i en fin transition) ----- */
 #scroll-to-om-arrow {
     width: var(--icon-size);
     height: var(--icon-size);
@@ -176,8 +154,6 @@ header {
     filter: invert(1);
 }
 
-
-/* --------------------------  Main styles -------------------------- */
 main {
     padding: 0 0 5rem;
     position: relative;
@@ -227,7 +203,6 @@ main {
     margin-right: 0.25rem;
 }
 
-/* -----  Scroll arrow to footer (gör även här så att den scrollar i en fin transition) ----- */
 #scroll-to-footer-arrow {
     width: var(--icon-size);
     height: var(--icon-size);
@@ -237,7 +212,6 @@ main {
     transform: translateX(-50%);
 }
 
-/* --------------------------  Footer styles -------------------------- */
 footer {
     background-color: var(--color-black);
     color: var(--color-white);
