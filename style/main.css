@@ -187,20 +187,21 @@ main {
 }
 
 .om-lagmedlem {
-    align-self: stretch;
+    position: relative;
+    width: 90%;
     background-color: var(--color-grey-text-background);
     border-radius: 8px;
-    padding: 2.5rem;
-    max-width: 90%;
-    margin: 0 auto;
+    padding: 2.5rem 2.5rem 2.5rem 4.5rem;
 }
 
-.citat-tecken {
+.om-lagmedlem::before {
+    content: "”";
+    position: absolute;
+    top: 2rem;
+    left: 1.25rem;
     font-size: 4rem;
     font-weight: 700;
-    line-height: 0;
-    vertical-align: -1.5rem;
-    margin-right: 0.25rem;
+    line-height: 1;
 }
 
 #scroll-to-footer-arrow {
